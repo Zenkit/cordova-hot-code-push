@@ -22,10 +22,9 @@
   <config-file parent="/*" target="config.xml">
     <preference name="loadUrlTimeoutValue" value="60000"/>
   </config-file>
-  <!-- Hooks -->
-  <hook src="scripts/afterPrepareHook.js" type="after_prepare"/>
-  <hook src="scripts/beforePluginInstallHook.js" type="before_plugin_install"/>
   <platform name="ios">
+    <!-- Hooks -->
+    <hook src="hooks/ios/after-prepare.js" type="after_prepare"/>
     <!-- Plugin inclusion in Cordova config.xml -->
     <config-file parent="/*" target="config.xml">
       <feature name="HotCodePush">
